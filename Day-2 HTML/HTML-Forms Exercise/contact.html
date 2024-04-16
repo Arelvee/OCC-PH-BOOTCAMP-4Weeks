@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact HTML</title>
 
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100..900&display=swap"
-        rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,19 +21,21 @@
 
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" placeholder="Enter your First Name" required />
+            <br>
+
 
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" placeholder="Enter your Last Name" required />
-
+            <br>
             <label for="age">Age:</label>
             <input type="number" id="age" name="age" placeholder="Enter your Age" required />
-
+            <br>
             <label for="nickname">Nickname:</label>
             <input type="text" id="nickname" name="nickname" placeholder="Enter your Nickname" />
-
+            <br>
             <label for="telephone">Telephone Number:</label>
             <input type="tel" id="telephone" name="telephone" placeholder="(02)-123-4567" required />
-
+            <br>
             <label for="maritalStatus">Marital Status:</label>
             <select id="maritalStatus" name="maritalStatus">
                 <option value="">--Select--</option>
@@ -42,21 +43,23 @@
                 <option value="married">Married</option>
                 <option value="other">Other</option>
             </select>
-
+            <br>
             <label>Gender:</label>
             <input type="radio" id="male" name="gender" value="male" />
             <label for="male">Male</label>
             <input type="radio" id="female" name="gender" value="female" />
             <label for="female">Female</label>
-
+            <br>
             <label for="address">Address:</label>
             <textarea id="address" name="address"></textarea>
-
+            <br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your Email Address" required />
-        </fieldset>
+            <br>
+
 
         <button type="submit">Register</button>
+    </fieldset>
     </form>
 </body>
 
