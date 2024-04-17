@@ -1,0 +1,71 @@
+body {
+    background-color: blanchedalmond;
+    /* gradient background */
+    background: rgb(200, 173, 173);
+    background: linear-gradient(54deg, rgba(200, 173, 173, 1) 0%, rgba(137, 56, 56, 1) 35%, rgb(89, 24, 24) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../CSS/images/bg.jpg);
+}
+
+.font-sample {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: teal;
+    color: mintcream;
+}
+
+.text-sample {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+#spacing-sample {
+    letter-spacing: 2px;
+    line-height: 5;
+    background-color: palegreen;
+    text-indent: 40px;
+}
+
+#shadow-sample {
+    text-shadow: 10px 5px 10px rgb(216, 143, 143);
+    /* text-shadow:
+  x-coordinate
+  y-coordinate
+  blur radius
+  color of the shadow
+  */
+}
+
+#box-model {
+    background-color: lavenderblush;
+    height: 100px;
+    width: 80px;
+    /* Padding */
+    padding: 10px 20px 5px 25px;
+    padding-top: 30px;
+    /* Border */
+    border-width: 5px;
+    border-style: dotted;
+    border-color: crimson;
+    border: 10px dashed orange;
+    border-top: 5px solid purple;
+    border-right: 5px dashed blue;
+    border-bottom: 8px inset green;
+    border-left: 8px double orange;
+    border-radius: 20px;
+    /* Margin */
+    margin: 5px 10px 40px 8px;
+    /* 
+  Padding & Margin SHORTHAND
+    1 value = applied to all 4 sides
+    2 value = top and bottom side || right and left side
+    3 value = top side || left and right side || bottom side
+    4 value = top side || right side || bottom side || left side 
+  */
+}
