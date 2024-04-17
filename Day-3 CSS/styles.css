@@ -1,0 +1,76 @@
+* {
+
+    color: blue;
+}
+p{
+    color: red;
+}
+
+.parag1 {
+
+    color: yellowgreen;
+
+}
+
+#parag2 {
+
+ color: rgb(172, 170, 2);
+}
+
+[href] {
+
+    color: rgb(91, 13, 26);
+}
+
+a[href] {
+
+    color: gold;
+}
+
+a[href="www.example1.com"] {
+
+    color: green;
+}
+
+h2, h3 {
+
+    color: brown;
+}
+
+.heading2, #heading3 {
+
+    font-size: 20px;
+    background-color: skyblue;
+    color: yellow;
+}
+
+/* Pseudo Classes */
+h2:hover{
+    background-color:rgb(91, 13, 26);
+    color: darkgrey;
+}
+
+h3::first-letter {
+
+    color: darkorange;
+}
+h3::before{
+
+    content: "Placed before h3 ";
+}
+
+h3::after {
+    content: "Placed after H3 ";
+}
+
+
+/* Earlier rule */
+h6 {
+
+    font-size: 60px  !important;
+}
+
+/* Later Rule */
+h6 {
+    font-size: 20px;
+}
