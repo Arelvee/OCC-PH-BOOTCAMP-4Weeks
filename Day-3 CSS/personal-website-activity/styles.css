@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* body styling */
+body {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    margin: 0;
+    /* Remove default page margins */
+    background: #DAE2F8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #D6A4A4, #DAE2F8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #D6A4A4, #DAE2F8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* header styling */
+header {
+    background: #DAE2F8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #D6A4A4, #DAE2F8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #D6A4A4, #DAE2F8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+
+}
+
+
+/*  CSS styling for the logo */
+#logo {
+    width: 100px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 20px;
+    /* Example margin */
+}
+
+.video-container {
+    position: relative;
+    /* Establish a container for positioning */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio */
+    z-index: -1;
+    /* Place the video behind the text */
+    opacity: 20%;
+}
+
+.text-content {
+    position: relative;
+    /* Ensure text is on top */
+}
+
+
+
+
+h1 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200px;
+    /* Adjust as needed */
+    font-size: 80px;
+    text-align: center;
+    padding: 70px;
+}
+
+/* Navbar styling */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+nav li a {
+    display: block;
+    padding: 10px 20px;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    color: #333;
+    border-radius: 6px;
+}
+
+nav li a:hover {
+    background-color: cornsilk;
+    color: #077775;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display:block; /* Hide the regular navigation on smaller screens */
+    }
+
+}
+
+/* general styling for the sections */
+section p, section ul {
+    font-size: 18px;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    padding: 5px 0;
+}
+
+
+
+
+
+/* about us tyling */
+#about-us {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Raleway", sans-serif;
+}
+
+#about-takoyamie {
+    text-align: center;
+    font-size: 25px;
+    max-width: 90%;
+    padding-left: 50px;
+    font-family: "Raleway", sans-serif;
+
+}
+
+
+
+/* This part is for the menu */
+#menu {
+    text-align: center; /* Center content of the section */
+
+}
+
+.menu-card {
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px auto; /* Center cards horizontally  */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Allow cards to sit next to each other */
+}
+
+@media (max-width: 768px) {
+    .menu-card {
+        width: 90%; /* Make cards more fluid on smaller screens */
+    }
+}
+
+.menu-card:hover {
+    background-color: rgb(239, 220, 255);
+}
+
+#menu-div {
+    text-align: justify;
+    margin: 10px auto;
+    /* Center the menu horizontally */
+    padding: 20px;
+    /* Even padding on all sides */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 30px;
+    font-family: "Raleway", sans-serif;
+    font-weight: lighter;
+}
+/* Image styling */
+.menu-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+    /* Add border at the bottom of the image */
+    margin-bottom: 10px;
+    /* Add margin bottom */
+}
+
+.menu-img:hover {
+
+    transform: scale(1.2);
+    /* Adjust the scale factor as desired */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add box shadow when hovered */
+}
+
+/* Menu item styling */
+.menu-item {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    /* Center items horizontally */
+    margin: 0px 10px;
+    /* Add margin between items */
+}
+
+/* Menu title styling */
+.menu-title {
+    font-size: 30px;
+    /* Increase font size */
+    margin-bottom: 15px;
+    /* Increase margin bottom */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#franchies-opp {
+
+    margin-top: 40px;
+}
+
+
+#franchise {
+    margin-top: 100px;
+    text-align: center;
+    padding: 50px;
+}
+
+#franchise table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#franchise th,
+#franchise td {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+#franchise th {
+    background-color: #456789;
+    color: white;
+    font-weight: normal;
+}
+
+#franchise tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+#franchise tbody tr:hover {
+    background-color: #e8e8e8;
+}
+
+@media (max-width: 768px) {
+    #franchise table {
+        font-size: 0.9em;
+         /* Make cards more fluid on smaller screens */
+    }
+}
+
+
+
+
+/* Aside styling part */
+aside {
+    width: 95%; /* Allow aside to take up most of the container width */
+    max-width: 600px; 
+    margin: 20px auto; /* Adjusted margin for smaller screens */
+    padding: 20px;
+    background-color: #f4f4f43f;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* for checking the latest offers and best sellers */
+#best-sellers {
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto; /* Add margin for better spacing */
+    width: 90%;        /* Allow to take up most of the space */
+    max-width: 300px;  /* Set a maximum width for larger screens */
+    display: block;     /* Force it to be a block-level element */
+
+}
+
+#latest-offers{
+
+    font-family: "Raleway", sans-serif;
+    font-weight:bold;
+    text-align: center;
+    padding-left: 35px;
+}
+
+
+
+@media (max-width: 768px) {
+    aside {
+        width: 80%; /* Increase width on smaller screens */
+    }
+
+#best-sellers {
+         max-width: 100%; /* Allow best-sellers to fill the container on smaller screens */
+}
+}
+
+
+article {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+.profile {
+    text-align: center;
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+@media (max-width: 768px) {
+    article {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .profile {
+        width: 90%; /* Make profiles wider on smaller screens */
+        margin: 0 auto 20px auto; /* Center and add spacing */
+    }
+}
+
+.logo {
+
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow images to wrap if necessary */
+}
+
+#contact img {
+    max-width: 50%; /* Allow image to take up full container width */
+    height: auto;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border-radius: 5%;
+}
+
+#contact img:hover {
+    transform: scale(1.2); /* Reduce scale on hover for smaller screens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    #contact img {
+         margin: 5px; /* Reduce margin on smaller screens */
+        max-width: 80%;
+    }
+}
+footer {
+    text-align: center; /* Not strictly necessary, depends on your desired layout */
+    display: flex;     /* Enable flexbox */
+    align-items: center; /* Vertically center items */
+    justify-content: center;  /* Center items horizontally */
+}
+.social-icons {
+    margin-top: 0;
+    /* Add some space between the text and social icons */
+}
+
+.social-icons a {
+    display: inline-block;
+    padding: 10px;
+    /* Adjust spacing between icons */
+}
+
+.social-icons img {
+    width: 25px;
+    /* Adjust the size of the icons as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav li {
+        display: block;
+        /* Change to block for vertical alignment on smaller screens */
+        margin: 10px 0;
+        text-align: center;
+        /* Center align the text */
+    }
+}
