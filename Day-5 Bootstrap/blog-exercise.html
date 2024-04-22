@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- Include Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Personal Blog</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Personal Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#blog-post-1">Blog Post 1</a></li>
+                            <li><a class="dropdown-item" href="#blog-post-2">Blog Post 2</a></li>
+                            <li><a class="dropdown-item" href="#blog-post-3">Blog Post 3</a></li>
+                            <li><a class="dropdown-item" href="#blog-post-4">Blog Post 4</a></li>
+                            <li><a class="dropdown-item" href="#blog-post-5">Blog Post 5</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-md-end mt-2 mt-md-0"> <!-- Use flex utilities and margin utilities for responsive behavior -->
+                <form class="d-flex mb-2 mb-md-0 me-md-2">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <!-- Page Header and Home -->
+        <header class="mt-5 mb-4" id="home">
+            <h1>Welcome to My Blog</h1>
+        </header>
+
+
+        <!-- About Section -->
+        <section id="about">
+            <header class="mt-5 mb-4">
+                <h2>About Us</h2>
+            </header>
+            <p class="lead">This is a blog that provides an excellent view of want the developer's interest and hobbies.
+                This also provides an idea what is the blog's point of view for the developer to the reader.</p>
+        </section>
+
+
+        <div class="row">
+            <!-- Blog Posts -->
+            <div class="col-md-8">
+                <!-- Blog Post 1 -->
+                <div class="card mb-4">
+                    <img class="card-img-top" src="assets/blog1.jpg" alt="Blog Post 1 Image">
+                    <div class="card-body" id="blog-post-1">
+                        <h2 class="card-title">Honkai Star Rail</h2>
+                        <p class="card-text" style="text-align: justify;">Honkai: Star Rail is a turn-based space
+                            fantasy RPG developed by miHoYo, the creators of Genshin Impact. Embark on a cosmic journey
+                            aboard the Astral Express, exploring diverse worlds and uncovering their hidden mysteries.
+                            Engage in strategic turn-based combat, exploiting elemental weaknesses and building your
+                            team of unique characters. Delve into procedurally generated dungeons, solve puzzles, and
+                            complete quests as you uncover a compelling story centered around the enigmatic Trailblazer
+                            and the cosmic forces known as Aeons and Stellaron. Expect beautiful anime-inspired visuals,
+                            intriguing characters, and a rich universe to explore when Honkai: Star Rail launches on
+                            April 26th, 2023 for PC and mobile devices.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on April 22, 2024 by Engr. Ralph Laurence Visaya
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="card mb-4">
+                    <img class="card-img-top" src="assets/blog2.jpg" alt="Blog Post 2 Image">
+                    <div class="card-body" id="blog-post-2">
+                        <h2 class="card-title">Mobile Legends Bang Bang</h2>
+                        <p class="card-text" style="text-align: justify;">Mobile Legends: Bang Bang (MLBB) is a
+                            thrilling MOBA designed for mobile devices. In this fast-paced game, two teams of five
+                            players clash in a battle to destroy the opposing team's base. Choose from a diverse roster
+                            of heroes, each boasting unique skills and roles, and strategize your way through lanes and
+                            jungles filled with monsters and power-ups. MLBB offers quick, intense matches packed with
+                            strategic depth. Its immense popularity, particularly in Southeast Asia, fuels a vibrant
+                            esports scene with professional leagues and global tournaments.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on April 22, 2024 by Engr. Ralph Laurence Visaya
+                    </div>
+                </div>
+
+
+                <!-- Blog Post 3 -->
+                <div class="card mb-4">
+                    <img class="card-img-top" src="assets/blog3.jpg" alt="Blog Post 3 Image">
+                    <div class="card-body">
+                        <h2 class="card-title">MS Electronics Engineering</h2>
+                        <p class="card-text" style="text-align: justify;">Batangas State University offers two Master's
+                            degrees in Electronics Engineering: the Master of Science in Electronics Engineering (MSECE)
+                            for advanced theoretical knowledge and research, and the Master of Engineering major in
+                            Electronics Engineering (M.Engg.ECE) for practical applications. Both programs delve into
+                            areas like advanced electronics design, signal processing, communication systems, and more.
+                            These programs provide opportunities to learn from expert faculty, engage in research, and
+                            advance your career in the electronics industry. For specific details on admissions,
+                            curriculum, and program distinctions, visit the Batangas State University website</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on April 22, 2024 by Engr. Ralph Laurence Visaya
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="card mb-4">
+                    <img class="card-img-top" src="assets/blog4.jpg" alt="Blog Post 4 Image">
+                    <div class="card-body">
+                        <h2 class="card-title">Python Developer</h2>
+                        <p class="card-text" style="text-align: justify;">Python developers are in-demand programmers
+                            who specialize in using the Python programming language. They design, build, and maintain
+                            various software solutions, including web applications, data analysis tools, automation
+                            scripts, and even machine learning models. Python's versatility, readability, and extensive
+                            libraries make it a popular choice across industries. Python developers work with other
+                            teams like data scientists and web designers, ensuring projects are well-structured,
+                            efficient, and meet user needs. If you enjoy problem-solving, logical thinking, and working
+                            with a powerful yet beginner-friendly language, a career as a Python developer might be an
+                            excellent path.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on April 22, 2024 by Engr. Ralph Laurence Visaya
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="card mb-4">
+                    <img class="card-img-top" src="assets/blog5.jpeg" alt="Blog Post 5 Image">
+                    <div class="card-body">
+                        <h2 class="card-title">Embedded Development</h2>
+                        <p class="card-text" style="text-align: justify;">Embedded developers are specialized
+                            programmers who build the software that powers "smart" devices, from wearables and
+                            appliances to industrial machinery and automotive systems. They work with low-level
+                            programming languages (like C/C++) and hardware components to create code that runs directly
+                            on microcontrollers and embedded systems. Embedded developers must expertly balance
+                            performance, efficiency, and reliability – their code often operates within tight resource
+                            constraints. They play a crucial role in driving innovation and intelligence in the
+                            ever-expanding world of connected and automated devices.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on April 22, 2024 by Engr. Ralph Laurence Visaya
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4 d-none d-md-block">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Categories</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Gaming
+                                <ul>
+                                    <!-- Add blog post titles under 'Technology' category -->
+                                    <li><a href="#blog-post-1">Honkai Star Rail</a></li>
+                                    <li><a href="#blog-post-2">Mobile Legends Bang Bang</a></li>
+                                    <!-- Add more blog post titles here if needed -->
+                                </ul>
+                            </li>
+                            <li class="list-group-item">Technology
+                                <ul>
+                                    <!-- Add blog post titles under 'Technology' category -->
+                                    <li><a href="#blog-post-4">Python Developer</a></li>
+                                    <li><a href="#blog-post-5">Embedded Development</a></li>
+                                    <!-- Add more blog post titles here if needed -->
+                                </ul>
+                            </li>
+                            <li class="list-group-item">Food
+                                <!-- Add blog post titles under 'Food' category -->
+                            </li>
+                            <li class="list-group-item">University and Graduate Schools
+                                <ul>
+                                    <!-- Add blog post titles under 'University and Graduate Schools' category -->
+                                    <li><a href="#blog-post-3">MS Electronics Engineering</a></li>
+                                    <!-- Add more blog post titles here if needed -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="text-center">
+                            <h2 class="section-heading">Contact Us</h2>
+                            <hr class="my-4">
+                            <p class="mb-5">Have questions? Feel free to reach out to us via the form below.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Your Name:</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Your Email:</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="Enter your email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Your Message:</label>
+                                        <textarea class="form-control" id="message" rows="5"
+                                            placeholder="Enter your message"></textarea>
+                                    </div>
+                                    <div class="text-center" style="margin-top: 10px;">
+                                        <button type="submit" class="btn btn-primary">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-muted">
+                                    You can also contact us through the following methods:<br>
+                                    Phone: +639051886434<br>
+                                    Email: info@example.com<br>
+                                    Address: 123 Street, Quezon City, Philippines
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="mt-5">
+            <p>&copy; 2023 My Blog. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Include Bootstrap JavaScript via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
