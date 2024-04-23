@@ -1,10 +1,10 @@
 // Variables
 // let - mutable or changeable variable
-let myName = "Abbi";
+let myName = "Ralph";
 console.log(myName);
 
 
-myName = "Isabel";
+myName = "Visaya";
 console.log(myName);
 
 
