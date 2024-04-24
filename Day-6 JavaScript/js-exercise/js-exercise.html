@@ -1,29 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Exercise</title>
+    <title>JavaScript Exercises</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<h1">JS Exercise</h1>
-<div>
-<p>1. Objective: Create a FizzBuzz program to practice loops and conditionals.
-    Instructions: Write a JavaScript program that prints numbers from 1 to 100
-    For multiples of 3, print "Fizz" instead of the number.
-    For multiples of 5, print "Buzz" instead of the number.
-    For numbers that are multiples of both 3 and 5, print "FizzBuzz.</p>
-</div>
+    <div class="exercise">
+        <h3>Exercise 1</h3>
+        <p>Objective: Create a FizzBuzz program to practice loops and conditionals.</p>
+        <pre>
+            <code>
+                for (let i = 1; i <= 100; i++) {
+                    // Check if the number is a multiple of 3 and 5 (FizzBuzz)
+                    if (i % 3 === 0 && i % 5 === 0) {
+                        console.log("FizzBuzz");
+                        // Check if the number is a multiple of 3 (Fizz)
+                    } else if (i % 3 === 0) {
+                        console.log("Fizz");
+                        // Check if the number is a multiple of 5 (Buzz)
+                    } else if (i % 5 === 0) {
+                        console.log("Buzz");
+                        // Print the number otherwise
+                    } else {
+                        console.log(i);
+                    }
+                }
 
-<div>
-    <p></p>
-</div>
+            </code>
+        </pre>
+    </div>
 
-    <!-- <script src="exercise1.js"></script> -->
+    <div class="exercise">
+        <h3>Exercise 2</h3>
+        <p>Objective: Convert temperature units using JavaScript.</p>
+        <pre>
+            <code>
+                // The forecast today is 293 Kelvin. This value will not change.
+                const kelvin = 293;
+
+                // Subtracting 273 from Kelvin to get the temperature in Celsius.
+                const celsius = kelvin - 273;
+
+                // Calculating Fahrenheit from Celsius.
+                let fahrenheit = celsius * (9/5) + 32;
+
+                // Displaying the temperature in Fahrenheit.
+                console.log(`The temperature is ${fahrenheit}°F.`);
+            </code>
+        </pre>
+    </div>
+
+    <div class="exercise">
+        <h3>Exercise 3</h3>
+        <p>Objective: Determine grades based on scores.</p>
+        <pre>
+            <code>
+                // Function to calculate the grade based on the score
+                function calculateGrade(score) {
+                    // Check if the score is outside the valid range (0 to 100)
+                    if (score < 0 || score > 100) {
+                        // Return an error message if the score is invalid
+                        return "Invalid score! Score must be between 0 and 100.";
+                    } else {
+                        // Determine the grade based on the score scenario on the exercise
+                        if (score >= 90) {
+                            return 'A';
+                        } else if (score >= 80) {
+                            return 'B';
+                        } else if (score >= 70) {
+                            return 'C';
+                        } else if (score >= 60) {
+                            return 'D';
+                        } else {
+                            return 'F';
+                        }
+                    }
+                }
+
+                // Flag to control whether to continue grading or not
+                let continueGrading = true;
+
+                // Loop to allow the user to enter scores until they decide to stop
+                while (continueGrading) {
+                    // Prompt the user to enter a score
+                    const score = parseInt(prompt("Enter the score:"));
+
+                    // Calculate the grade based on the entered score
+                    const grade = calculateGrade(score);
+
+                    // Display the calculated grade to the user
+                    console.log("The grade is: " + grade);
+
+                    // Ask the user if they want to continue grading
+                    const continueInput = prompt("Do you want to continue grading? (yes/no)");
+
+                    // If the user does not want to continue, set continueGrading to false to exit the loop
+                    if (continueInput.toLowerCase() !== 'yes') {
+                        continueGrading = false;
+                    }
+                }
+
+                // Display a goodbye message when grading is finished
+                console.log("Goodbye! Thank you for grading.");
+
+            </code>
+        </pre>
+    </div>
+
+    <div class="exercise">
+        <h3>Exercise 4</h3>
+        <p>Objective: Print numbers within a given range.</p>
+        <pre>
+            <code>
+                // Prompt the user to enter the starting and ending numbers for the range
+                const startNum = parseInt(prompt("Enter the starting number:"));
+                const endNum = parseInt(prompt("Enter the ending number:"));
+
+                // Check if the inputs are valid numbers
+                if (!isNaN(startNum) && !isNaN(endNum)) {
+                    // Loop to iterate through the numbers in the range and print each number
+                    console.log("Numbers between " + startNum + " and " + endNum + ":");
+                    for (let i = startNum; i <= endNum; i++) {
+                        console.log(i);
+                    }
+                } else {
+                    // Print an error message if the inputs are not valid numbers
+                    console.log("Invalid input! Please enter valid numbers.");
+                }
+
+            </code>
+        </pre>
+    </div>
+
+    <div class="exercise">
+        <h3>Exercise 5</h3>
+        <p>Objective: Find the largest number in an array.</p>
+        <pre>
+            <code>
+                function findLargestNumber(numbers) {
+                    // Check if the array is empty
+                    if (numbers.length === 0) {
+                        return "Array is empty";
+                    }
+
+                    // Initialize a variable to store the largest number
+                    let largest = numbers[0];
+
+                    // Loop through the array elements starting from the second element
+                    for (let i = 1; i < numbers.length; i++) {
+                        // Compare the current element with the current largest number
+                        // Update the largest number if the current element is greater
+                        if (numbers[i] > largest) {
+                            largest = numbers[i];
+                        }
+                    }
+
+                    // Return the largest number found
+                    return largest;
+                }
+
+                // This is the implementation part of finding the largest number in an array:
+                const numbers = [10, 5, 20, 15, 30, 98, ]; // add array values
+                const largestNumber = findLargestNumber(numbers);  //tagged the functoion to find largerst number
+                console.log("The largest number is:", largestNumber); //print and display the number
+
+            </code>
+        </pre>
+    </div>
+
+
+    <script src="exercise1.js"></script>
     <!-- <script src="exercise2.js"></script> -->
     <!-- <script src="exercise3.js"></script> -->
     <!-- <script src="exercise4.js"></script> -->
-    <script src="exercise5.js"></script>
+    <!-- <script src="exercise5.js"></script> -->
 </body>
+
 </html>
