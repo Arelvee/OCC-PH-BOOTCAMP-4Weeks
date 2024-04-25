@@ -1,5 +1,5 @@
 // The forecast today is 293 Kelvin. This value will not change.
-const kelvin = 293;
+const kelvin = 300;
 
 // Subtracting 273 from Kelvin to get the temperature in Celsius.
 const celsius = kelvin - 273;
