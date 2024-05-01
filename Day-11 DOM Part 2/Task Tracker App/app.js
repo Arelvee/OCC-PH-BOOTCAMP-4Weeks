@@ -1,6 +1,5 @@
 // Select DOM elements
 const todoInput = document.querySelector(".todo-input"); // Input field for adding new tasks
-
 const todoButton = document.querySelector(".todo-button"); // Button to add new tasks
 const todoList = document.querySelector(".todo-list"); // UL element to display tasks
 const filterOption = document.querySelector(".filter-todo"); // Dropdown for filtering tasks
@@ -11,6 +10,8 @@ document.addEventListener("DOMContentLoaded", getTodos); // 5. Load tasks from l
 todoList.addEventListener("click", deleteTodo); // 8. Delete or complete a task when clicked
 filterOption.addEventListener("click", filterTodo); //10. Filter tasks based on completion status
 todoList.addEventListener("click", editTodo); //13. Add event listener to edit the task
+
+
 // 1. Function to save tasks to localStorage
 function saveLocalTodos(todo) {
     let todos;

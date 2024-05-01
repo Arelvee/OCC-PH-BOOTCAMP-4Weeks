@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.card {
+    background-color: #ffffff07;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    /* Increased padding for spacing */
+    width: 350px;
+    /* Increased width for better display */
+    text-align: center;
+    /* Center the elements */
+}
+
+.card input[type="number"] {
+    width: calc(100% - 100px);
+    /* More space for the input */
+    padding: 15px;
+    /* Increased padding for readability */
+    border: 1px solid #fcf8f821;
+    background: #ffffff22;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    /* Larger text for input */
+    text-align: center;
+    /* Center the input value */
+}
+
+.card button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    /* Larger button text */
+    margin-right: 15px;
+}
+
+
+#startButton {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#startButton:hover {
+    
+    color: #fff;
+    background-color: #008b09;
+}
+
+#resetButton {
+    background-color: #6c757d;
+    /* Secondary color for reset */
+    color: #fff;
+}
+
+
+#resetButton:hover {
+    background-color: #ff3700;
+    /* Secondary color for reset */
+    color: #fff;
+}
+
+#timerDisplay {
+    font-size: 70px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    /* Some space below the timer */
+}
