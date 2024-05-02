@@ -1,4 +1,3 @@
-
 // Declare the DOM ELEMENTS
 const timerDisplay = document.getElementById("timerDisplay");
 const minutesInput = document.getElementById("minutesInput");
@@ -35,21 +34,24 @@ function resetTimer() {
     timerDisplay.textContent = "00:00";
     minutesInput.value = ""; // Clear input field
 }
+
+
 //5. asynchronous function with await and promise applied inside
 async function startTimer(minutes) {
     let seconds = 0;
 
     // Update timer display
     const updateDisplay = () => {
-        timerDisplay.textContent = `${String(minutes).padStart(2, "0")}:${String(
-            seconds
-        ).padStart(2, "0")}`;
+        if (continueTimer) { // Check continueTimer before updating
+            timerDisplay.textContent = `${String(minutes).padStart(2, "0")}:${String(
+                seconds
+            ).padStart(2, "0")}`;
+        }
     };
-
 
     // Timer loop
     while (minutes > 0 || seconds > 0) {
-        if (!continueTimer) break; // Check continueTimer in the loop
+        if (!continueTimer) break; // Check continueTimer first in the loop
 
         await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
         seconds--;
@@ -67,5 +69,3 @@ async function startTimer(minutes) {
         alert("Time's up!");
     }
 }
-
-
