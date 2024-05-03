@@ -4,16 +4,13 @@ const minutesInput = document.getElementById("minutesInput");
 const startButton = document.getElementById("startButton");
 const resetButton = document.getElementById("resetButton");
 
-
-let timerPromise; // Variable to store the timer's promise
 let continueTimer = true; // Add a boolean variable to track whether the timer should continue running
 
-//Event Handling
-startButton.addEventListener("click", startTime); //3. handle event when start button is clicked
-resetButton.addEventListener("click", resetTimer); //  4. handle event when reset time button is clicked
+// Event Handling
+startButton.addEventListener("click", startTime); // handle event when start button is clicked
+resetButton.addEventListener("click", resetTimer); // handle event when reset time button is clicked
 
-
-// 1. function to start time
+// Function to start time
 function startTime() {
     continueTimer = true; // Reset the continueTimer variable
     const minutes = parseFloat(minutesInput.value);
@@ -25,18 +22,14 @@ function startTime() {
     }
 }
 
-// 2. Function to reset the timer (simplified)
-
+// Function to reset the timer (simplified)
 function resetTimer() {
     continueTimer = false; // Stop the timer (if it's running)
-    seconds = 0; // Reset seconds to 0
-    minutes = 0; // Reset minutes to 0
     timerDisplay.textContent = "00:00";
     minutesInput.value = ""; // Clear input field
 }
 
-
-//5. asynchronous function with await and promise applied inside
+// Asynchronous function with await and promise applied inside
 async function startTimer(minutes) {
     let seconds = 0;
 
@@ -51,20 +44,34 @@ async function startTimer(minutes) {
 
     // Timer loop
     while (minutes > 0 || seconds > 0) {
-        if (!continueTimer) break; // Check continueTimer first in the loop
+        try {
+            await new Promise((resolve, reject) => {
+                const timerId = setTimeout(() => {
+                    if (!continueTimer) {
+                        clearTimeout(timerId); // Clear the timer
+                        reject(new Error('Timer stopped.')); // Reject the promise if continueTimer becomes false
+                    } else {
+                        clearTimeout(timerId); // Clear the timer
+                        resolve(); // Resolve the promise after 1 second
+                    }
+                }, 1000);
+            });
 
-        await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
-        seconds--;
+            seconds--;
 
-        if (seconds < 0 && minutes > 0) {
-            seconds = 59;
-            minutes--;
+            if (seconds < 0 && minutes > 0) {
+                seconds = 59;
+                minutes--;
+            }
+
+            updateDisplay();
+        } catch (error) {
+            console.error(error.message); // Log the error message to the console
+            return; // Break out of the loop if an error occurs
         }
-
-        updateDisplay();
     }
 
-    // Time's up alert (no changes needed)
+    // Time's up alert
     if (continueTimer) {
         alert("Time's up!");
     }
